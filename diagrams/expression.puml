@@ -1,0 +1,50 @@
+@startuml
+Interface Function{
+Double resolve()
+Double resolve(Map<String, Double> mapVars)
+String toString()
+List<String> paramteres()
+}
+
+class Value implements Function{
+float literalValue
+}
+
+class Variable implements Function{
+String name
+}
+
+class BinaryExpression extends Function{
+Function Left
+Function Right
+BinaryOperator<Double> operator
+BinaryOperators opCode
+}
+
+class UnaryExpression implements Function {
+Function fun
+UnaryOperator<Double> operator
+UnaryOperators opCode;
+}
+
+
+
+enum BinaryOperators {
+    SUM,
+    SUBSTRACTION,
+    MULTIPLICATION,
+    DIVSION,
+    POWER,
+}
+
+enum UnaryOperators {
+    ABS,
+    PARENTHESIS
+}
+
+
+BinaryExpression *-- Function
+UnaryExpression --> Function
+
+
+@enduml
