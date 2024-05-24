@@ -23,7 +23,7 @@ public class Value implements Function {
 
   @Override
   public String toString() {
-    return String.valueOf(value);
+    return value % 1 == 0 ? String.valueOf((int) value) : String.valueOf(value);
   }
 
   @Override

@@ -41,7 +41,7 @@ public class BinaryExpression implements Function {
 
   @Override
   public String toString() {
-    return left.toString() + opCode + right.toString();
+    return left.toString() + " " + opCode + " " + right.toString();
   }
 
   @Override

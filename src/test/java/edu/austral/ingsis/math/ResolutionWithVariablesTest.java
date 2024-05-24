@@ -1,12 +1,10 @@
 package edu.austral.ingsis.math;
 
-import org.junit.jupiter.api.Test;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.Map;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ResolutionWithVariablesTest {
 

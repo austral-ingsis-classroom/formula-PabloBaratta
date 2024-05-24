@@ -25,7 +25,7 @@ public class UnaryExpression implements Function {
   public Try<Double, Exception> resolve(Map<String, Double> mapVars) {
     Try<Double, Exception> resolve = fun.resolve(mapVars);
 
-    if (resolve().isFailure()) {
+    if (resolve.isFailure()) {
       return resolve;
     }
 
@@ -36,7 +36,7 @@ public class UnaryExpression implements Function {
 
   @Override
   public String toString() {
-    return opCode.left + fun.toString() + opCode.toString();
+    return opCode.left + fun.toString() + opCode.right;
   }
 
   @Override
